@@ -1,5 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddStackExchangeRedisCache(opt =>
+{
+    opt.Configuration = "localhost:6379";
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
