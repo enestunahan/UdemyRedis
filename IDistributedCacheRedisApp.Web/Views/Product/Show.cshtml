@@ -1,10 +1,7 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-
+﻿@{
+    ViewData["Title"] = "Show";
+    Product p = ViewBag.Product as Product;
 }
 
-@ViewBag.Name
 
-@ViewBag.AsyncName
+@p.Id  || @p.Name  || @p.Price
